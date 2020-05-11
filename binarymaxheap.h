@@ -53,7 +53,7 @@ public:
         }
     }
 
-    bool const insert(Data const data)
+    bool const insert(Data const data)/// добавить элемент
     {
         unsigned  int countelement = 0;
         for(unsigned int i = 0 ; i<heapHight;++i)
@@ -88,7 +88,7 @@ public:
         ++currentIndex;
         return true;
     }
-    bool const deleteThis()
+    bool const deleteThis()/// удалить элемент
     {
         if(heapHight == 0)
             return false;
@@ -121,7 +121,7 @@ public:
         --currentIndex;
         return true;
     }
-    bool clear()
+    bool clear()/// очистка
     {
         if(heap == nullptr)
             return false;
@@ -131,14 +131,14 @@ public:
         currentIndex = 0;
         return true;
     }
-    bool isContains(Data const data) const
+    bool isContains(Data const data) const/// проверка наличия элемента
     {
         for(unsigned int i = 0; i < currentIndex; ++i)
             if(heap[i].data == data)
                 return true;
         return false;
     }
-    bool isEmpty() const
+    bool isEmpty() const/// проверка наличия элементов
     {
         if(currentIndex == 0)
             return true;
